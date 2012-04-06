@@ -114,9 +114,27 @@
         self.noResultLabel.hidden = NO;
         self.noResultLabel.text = @"搜索中....";
         //self.webView.hidden = YES;
+        
+        NSError *error;
+        NSURLResponse *response;
+        NSData *dataReply;
     
         NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"http://dict.youdao.com/drawsth?letters=%@&length=%d", self.letters.text, searchLen]];
-        //NSURLRequest* request = [NSURLRequest requestWithURL:url];
+        NSURLRequest* request = [NSURLRequest requestWithURL:url];
+        dataReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+        id stringReply;
+        stringReply = (NSString *)[[NSString alloc] initWithData:dataReply encoding:NSUTF8StringEncoding];
+        // Some debug code, etc.
+        NSLog(@"reply from server: %@", stringReply);
+
+        NSHTTPURLResponse *httpResponse;
+        httpResponse = (NSHTTPURLResponse *)response;
+        int statusCode = [httpResponse statusCode];  
+        NSLog(@"HTTP Response Headers %@", [httpResponse allHeaderFields]); 
+        NSLog(@"HTTP Status code: %d", statusCode);
+        // End debug.
+
         //[self.webView loadRequest:request];
         //[self.webView stringByEvaluatingJavaScriptFromString:@"document.body.style.zoom = 0.5;"];
         //self.webView.scalesPageToFit = NO;
