@@ -10,9 +10,22 @@
 		BBBF248B152F341A00AA228F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248A152F341A00AA228F /* UIKit.framework */; };
 		BBBF248D152F341A00AA228F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248C152F341A00AA228F /* Foundation.framework */; };
 		BBBF248F152F341A00AA228F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248E152F341A00AA228F /* CoreGraphics.framework */; };
-		BBBF2495152F341A00AA228F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBF2493152F341A00AA228F /* InfoPlist.strings */; };
-		BBBF2497152F341A00AA228F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF2496152F341A00AA228F /* main.m */; };
-		BBBF249B152F341A00AA228F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF249A152F341A00AA228F /* AppDelegate.m */; };
+		BBBF24C1152F350100AA228F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24B6152F350100AA228F /* AppDelegate.m */; };
+		BBBF24C2152F350100AA228F /* DictEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24B8152F350100AA228F /* DictEntry.m */; };
+		BBBF24C3152F350100AA228F /* DictEnty.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BA152F350100AA228F /* DictEnty.m */; };
+		BBBF24C4152F350100AA228F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BC152F350100AA228F /* main.m */; };
+		BBBF24C5152F350100AA228F /* UIDictTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BE152F350100AA228F /* UIDictTableView.m */; };
+		BBBF24C6152F350100AA228F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24C0152F350100AA228F /* ViewController.m */; };
+		BBBF24CF152F350D00AA228F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24C8152F350D00AA228F /* Default.png */; };
+		BBBF24D0152F350D00AA228F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24C9152F350D00AA228F /* Default@2x.png */; };
+		BBBF24D1152F350D00AA228F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24CA152F350D00AA228F /* Icon@2x.png */; };
+		BBBF24D2152F350D00AA228F /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24CB152F350D00AA228F /* icon_114x114.png */; };
+		BBBF24D3152F350D00AA228F /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24CC152F350D00AA228F /* icon_57x57.png */; };
+		BBBF24D4152F350D00AA228F /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24CD152F350D00AA228F /* lightbulb.png */; };
+		BBBF24D5152F350D00AA228F /* Tip_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24CE152F350D00AA228F /* Tip_icon.png */; };
+		BBBF24DD152F35A100AA228F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D7152F35A100AA228F /* InfoPlist.strings */; };
+		BBBF24DE152F35A100AA228F /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D9152F35A100AA228F /* ViewController_iPad.xib */; };
+		BBBF24DF152F35A100AA228F /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24DB152F35A100AA228F /* ViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +33,27 @@
 		BBBF248A152F341A00AA228F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBBF248C152F341A00AA228F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBBF248E152F341A00AA228F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BBBF2492152F341A00AA228F /* DrawCheatsApp-Info.plist */ = {isa = PBXFileReference; path = "DrawCheatsApp-Info.plist"; sourceTree = "<group>"; };
-		BBBF2494152F341A00AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BBBF2496152F341A00AA228F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BBBF2498152F341A00AA228F /* DrawCheatsApp-Prefix.pch */ = {isa = PBXFileReference; path = "DrawCheatsApp-Prefix.pch"; sourceTree = "<group>"; };
-		BBBF2499152F341A00AA228F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		BBBF249A152F341A00AA228F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BBBF24B5152F350100AA228F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BBBF24B6152F350100AA228F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BBBF24B7152F350100AA228F /* DictEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictEntry.h; sourceTree = "<group>"; };
+		BBBF24B8152F350100AA228F /* DictEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictEntry.m; sourceTree = "<group>"; };
+		BBBF24B9152F350100AA228F /* DictEnty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictEnty.h; sourceTree = "<group>"; };
+		BBBF24BA152F350100AA228F /* DictEnty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictEnty.m; sourceTree = "<group>"; };
+		BBBF24BC152F350100AA228F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBBF24BD152F350100AA228F /* UIDictTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDictTableView.h; sourceTree = "<group>"; };
+		BBBF24BE152F350100AA228F /* UIDictTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDictTableView.m; sourceTree = "<group>"; };
+		BBBF24BF152F350100AA228F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BBBF24C0152F350100AA228F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BBBF24C8152F350D00AA228F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BBBF24C9152F350D00AA228F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BBBF24CA152F350D00AA228F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BBBF24CB152F350D00AA228F /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
+		BBBF24CC152F350D00AA228F /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
+		BBBF24CD152F350D00AA228F /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb.png; sourceTree = "<group>"; };
+		BBBF24CE152F350D00AA228F /* Tip_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tip_icon.png; sourceTree = "<group>"; };
+		BBBF24D8152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BBBF24DA152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPad.xib; sourceTree = "<group>"; };
+		BBBF24DC152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +73,9 @@
 		BBBF247B152F341900AA228F = {
 			isa = PBXGroup;
 			children = (
-				BBBF2490152F341A00AA228F /* DrawCheatsApp */,
+				BBBF24D6152F35A100AA228F /* en.lproj */,
+				BBBF24C7152F350D00AA228F /* Graphics */,
+				BBBF24B4152F350100AA228F /* App */,
 				BBBF2489152F341A00AA228F /* Frameworks */,
 				BBBF2487152F341A00AA228F /* Products */,
 			);
@@ -69,25 +99,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BBBF2490152F341A00AA228F /* DrawCheatsApp */ = {
+		BBBF24B4152F350100AA228F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BBBF2499152F341A00AA228F /* AppDelegate.h */,
-				BBBF249A152F341A00AA228F /* AppDelegate.m */,
-				BBBF2491152F341A00AA228F /* Supporting Files */,
+				BBBF24B5152F350100AA228F /* AppDelegate.h */,
+				BBBF24B6152F350100AA228F /* AppDelegate.m */,
+				BBBF24B7152F350100AA228F /* DictEntry.h */,
+				BBBF24B8152F350100AA228F /* DictEntry.m */,
+				BBBF24B9152F350100AA228F /* DictEnty.h */,
+				BBBF24BA152F350100AA228F /* DictEnty.m */,
+				BBBF24BC152F350100AA228F /* main.m */,
+				BBBF24BD152F350100AA228F /* UIDictTableView.h */,
+				BBBF24BE152F350100AA228F /* UIDictTableView.m */,
+				BBBF24BF152F350100AA228F /* ViewController.h */,
+				BBBF24C0152F350100AA228F /* ViewController.m */,
 			);
-			path = DrawCheatsApp;
+			path = App;
 			sourceTree = "<group>";
 		};
-		BBBF2491152F341A00AA228F /* Supporting Files */ = {
+		BBBF24C7152F350D00AA228F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				BBBF2492152F341A00AA228F /* DrawCheatsApp-Info.plist */,
-				BBBF2493152F341A00AA228F /* InfoPlist.strings */,
-				BBBF2496152F341A00AA228F /* main.m */,
-				BBBF2498152F341A00AA228F /* DrawCheatsApp-Prefix.pch */,
+				BBBF24C8152F350D00AA228F /* Default.png */,
+				BBBF24C9152F350D00AA228F /* Default@2x.png */,
+				BBBF24CA152F350D00AA228F /* Icon@2x.png */,
+				BBBF24CB152F350D00AA228F /* icon_114x114.png */,
+				BBBF24CC152F350D00AA228F /* icon_57x57.png */,
+				BBBF24CD152F350D00AA228F /* lightbulb.png */,
+				BBBF24CE152F350D00AA228F /* Tip_icon.png */,
 			);
-			name = "Supporting Files";
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		BBBF24D6152F35A100AA228F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				BBBF24D7152F35A100AA228F /* InfoPlist.strings */,
+				BBBF24D9152F35A100AA228F /* ViewController_iPad.xib */,
+				BBBF24DB152F35A100AA228F /* ViewController_iPhone.xib */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +191,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBBF2495152F341A00AA228F /* InfoPlist.strings in Resources */,
+				BBBF24CF152F350D00AA228F /* Default.png in Resources */,
+				BBBF24D0152F350D00AA228F /* Default@2x.png in Resources */,
+				BBBF24D1152F350D00AA228F /* Icon@2x.png in Resources */,
+				BBBF24D2152F350D00AA228F /* icon_114x114.png in Resources */,
+				BBBF24D3152F350D00AA228F /* icon_57x57.png in Resources */,
+				BBBF24D4152F350D00AA228F /* lightbulb.png in Resources */,
+				BBBF24D5152F350D00AA228F /* Tip_icon.png in Resources */,
+				BBBF24DD152F35A100AA228F /* InfoPlist.strings in Resources */,
+				BBBF24DE152F35A100AA228F /* ViewController_iPad.xib in Resources */,
+				BBBF24DF152F35A100AA228F /* ViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,20 +211,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBBF2497152F341A00AA228F /* main.m in Sources */,
-				BBBF249B152F341A00AA228F /* AppDelegate.m in Sources */,
+				BBBF24C1152F350100AA228F /* AppDelegate.m in Sources */,
+				BBBF24C2152F350100AA228F /* DictEntry.m in Sources */,
+				BBBF24C3152F350100AA228F /* DictEnty.m in Sources */,
+				BBBF24C4152F350100AA228F /* main.m in Sources */,
+				BBBF24C5152F350100AA228F /* UIDictTableView.m in Sources */,
+				BBBF24C6152F350100AA228F /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BBBF2493152F341A00AA228F /* InfoPlist.strings */ = {
+		BBBF24D7152F35A100AA228F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BBBF2494152F341A00AA228F /* en */,
+				BBBF24D8152F35A100AA228F /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BBBF24D9152F35A100AA228F /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBBF24DA152F35A100AA228F /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		BBBF24DB152F35A100AA228F /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBBF24DC152F35A100AA228F /* en */,
+			);
+			name = ViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
