@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BBBF2486152F341A00AA228F /* DrawCheatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawCheatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBF2486152F341A00AA228F /* Draw助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Draw助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBF248A152F341A00AA228F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBBF248C152F341A00AA228F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBBF248E152F341A00AA228F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,7 +81,7 @@
 		BBBF2487152F341A00AA228F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBBF2486152F341A00AA228F /* DrawCheatsApp.app */,
+				BBBF2486152F341A00AA228F /* Draw助手.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			);
 			name = "Draw助手";
 			productName = DrawCheatsApp;
-			productReference = BBBF2486152F341A00AA228F /* DrawCheatsApp.app */;
+			productReference = BBBF2486152F341A00AA228F /* Draw助手.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

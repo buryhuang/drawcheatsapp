@@ -21,7 +21,6 @@
 @synthesize length;
 @synthesize noResultLabel;
 @synthesize contentTable;
-@synthesize detailTextView;
 
 - (void)viewDidLoad
 {
@@ -69,7 +68,8 @@
 // Segmented Control
 -(IBAction) segmentedControlIndexChanged
 {
-    [self updateResult];
+    //dont do this now.
+    //[self updateResult];
 }
 
 - (void)updateResult
@@ -211,13 +211,19 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     [alert show];
      */
+/*
 	if (self.detailTextView == nil) {
         self.detailTextView = [[UITextViewController alloc] initWithNibName:@"DetailTextViewController" bundle:[NSBundle mainBundle]];
     }
-    
+ */
+/*
+    UIViewController * detailTextView;
+    detailTextView = [[UIViewController alloc] init];
+
     DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
-    [self.detailTextView.detailText setText:entry.desc];
-    [self.navigationController pushViewController:self.detailTextView animated:YES];
+    //[self.detailTextView.detailText setText:entry.desc];
+    [self.navigationController pushViewController:detailTextView animated:YES];
+*/
 }
 
 - (void)insertEntry:(NSString*)word desc:(NSString*)desc
