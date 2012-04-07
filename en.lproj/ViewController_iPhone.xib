@@ -254,7 +254,7 @@
 						<string key="NSFrame">{{0, 100}, {320, 311}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="413277530"/>
+						<reference key="NSNextKeyView" ref="985335088"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="1055244723"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -268,12 +268,13 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBADBannerView" id="413277530">
+					<object class="IBADBannerView" id="985335088">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">306</int>
 						<string key="NSFrame">{{0, 410}, {320, 50}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -358,7 +359,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">adBanner</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="413277530"/>
+						<reference key="destination" ref="985335088"/>
 					</object>
 					<int key="connectionID">110</int>
 				</object>
@@ -390,7 +391,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="413277530"/>
+						<reference key="source" ref="985335088"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">111</int>
@@ -426,7 +427,7 @@
 							<reference ref="241131353"/>
 							<reference ref="993370835"/>
 							<reference ref="860913548"/>
-							<reference ref="413277530"/>
+							<reference ref="985335088"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -467,7 +468,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">109</int>
-						<reference key="object" ref="413277530"/>
+						<reference key="object" ref="985335088"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>
