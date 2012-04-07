@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UITextViewController.h"
+#import "iAd/ADBannerView.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate> {
     integer_t curSearchLen;
@@ -26,6 +26,8 @@
 @property (nonatomic) IBOutlet UILabel *noResultLabel;
 
 @property (nonatomic) IBOutlet UITableView *contentTable;
+
+@property (nonatomic) IBOutlet ADBannerView * adBanner;
 
 
 -(IBAction) segmentedControlIndexChanged;

@@ -23,6 +23,7 @@
 @synthesize length;
 @synthesize noResultLabel;
 @synthesize contentTable;
+@synthesize adBanner;
 
 - (void)viewDidLoad
 {
@@ -43,6 +44,13 @@
     
     self.curSearchLetters = @"";
     self->curSearchLen = 0;
+    
+    [super viewDidLoad];
+    //(void)[self.adBanner initWithFrame:CGRectZero];
+    //self.adBanner.requiredContentSizeIdentifiers = 
+    //[NSSet setWithObjects:ADBannerContentSizeIdentifierPortrait,nil];
+    //self.adBanner.delegate = self;
+
     
 }
 

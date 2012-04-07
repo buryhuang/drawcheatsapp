@@ -23,6 +23,7 @@
 		BBDAD649152F39E600A17CAD /* DefaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */; };
 		BBDAD64B152F39ED00A17CAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD64A152F39ED00A17CAD /* Default.png */; };
 		BBDAD64D152F39F200A17CAD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD64C152F39F200A17CAD /* Default@2x.png */; };
+		BBE1C8541530E28600C3FB9C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE1C8531530E28600C3FB9C /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultIcon@2x.png"; sourceTree = "<group>"; };
 		BBDAD64A152F39ED00A17CAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BBDAD64C152F39F200A17CAD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BBE1C8531530E28600C3FB9C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE1C8541530E28600C3FB9C /* iAd.framework in Frameworks */,
 				BBBF248B152F341A00AA228F /* UIKit.framework in Frameworks */,
 				BBBF248D152F341A00AA228F /* Foundation.framework in Frameworks */,
 				BBBF248F152F341A00AA228F /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		BBBF247B152F341900AA228F = {
 			isa = PBXGroup;
 			children = (
+				BBE1C8531530E28600C3FB9C /* iAd.framework */,
 				BBDAD64C152F39F200A17CAD /* Default@2x.png */,
 				BBDAD64A152F39ED00A17CAD /* Default.png */,
 				BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */,
@@ -287,10 +291,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HAOHUA Huang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
 				PRODUCT_NAME = "Draw助手";
+				PROVISIONING_PROFILE = "96F98B21-905B-4762-9C45-274C1614FBB9";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -300,10 +306,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HAOHUA Huang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
 				PRODUCT_NAME = "Draw助手";
+				PROVISIONING_PROFILE = "96F98B21-905B-4762-9C45-274C1614FBB9";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
