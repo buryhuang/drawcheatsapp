@@ -141,7 +141,7 @@
             if(foundWord) {
                 newWord = [newWord substringFromIndex:[wordPrefix length]];
                 newTrans = [newTrans substringFromIndex:[transPrefix length]];
-                NSLog(@"Adding pair %@:%@", newWord, newTrans);
+                //NSLog(@"Adding pair %@:%@", newWord, newTrans);
                 [self insertEntry:newWord desc:newTrans];
                 [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
             }
@@ -173,7 +173,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    static NSString *CellIdentifier = @"_Cell";
+    static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -187,8 +187,9 @@
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     //NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
     
-    cell.textLabel.text = entry.word;        
-    cell.detailTextLabel.text = @"aaa";//entry.desc;
+    // TODO use detailText
+    cell.textLabel.text = [NSString stringWithFormat:@"%@-%@", entry.word, entry.desc];        
+    cell.detailTextLabel.text = entry.desc;
 
     return cell;
 }
@@ -209,7 +210,7 @@
     
     [self.lookupDict insertObject:entry atIndex:0];
     
-    NSLog(@"after update, array size = %d", [self.lookupDict count]);
+    //NSLog(@"after update, array size = %d", [self.lookupDict count]);
 }
 
 

@@ -125,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BBBF2485152F341A00AA228F /* DrawCheatsApp */ = {
+		BBBF2485152F341A00AA228F /* Draw助手 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "DrawCheatsApp" */;
+			buildConfigurationList = BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "Draw助手" */;
 			buildPhases = (
 				BBBF2482152F341A00AA228F /* Sources */,
 				BBBF2483152F341A00AA228F /* Frameworks */,
@@ -137,7 +137,7 @@
 			);
 			dependencies = (
 			);
-			name = DrawCheatsApp;
+			name = "Draw助手";
 			productName = DrawCheatsApp;
 			productReference = BBBF2486152F341A00AA228F /* DrawCheatsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -162,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BBBF2485152F341A00AA228F /* DrawCheatsApp */,
+				BBBF2485152F341A00AA228F /* Draw助手 */,
 			);
 		};
 /* End PBXProject section */
@@ -309,7 +309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "DrawCheatsApp" */ = {
+		BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "Draw助手" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBBF249F152F341A00AA228F /* Debug */,
