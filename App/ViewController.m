@@ -37,6 +37,8 @@
     
     self.lookupDict = [NSMutableArray array];
     
+    self.contentTable.hidden = YES;
+    
 }
 
 - (void)viewDidUnload
@@ -80,7 +82,7 @@
         
         self.noResultLabel.hidden = NO;
         self.noResultLabel.text = @"搜索中....";
-        //self.webView.hidden = YES;
+        self.contentTable.hidden = YES;
     
         NSError *error;
         NSURLResponse *response;
@@ -92,6 +94,7 @@
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         dataReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
+        self.contentTable.hidden = NO;
 
         id stringReply;
         stringReply = (NSString *)[[NSString alloc] initWithData:dataReply encoding:NSUTF8StringEncoding];
@@ -136,9 +139,10 @@
             }
 
             if(foundWord) {
-                [self insertEntry:[newWord substringFromIndex:[wordPrefix length]]
-                                desc:[newTrans substringFromIndex:[transPrefix length]]];
-            
+                newWord = [newWord substringFromIndex:[wordPrefix length]];
+                newTrans = [newTrans substringFromIndex:[transPrefix length]];
+                NSLog(@"Adding pair %@:%@", newWord, newTrans);
+                [self insertEntry:newWord desc:newTrans];
                 [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
             }
         
@@ -149,28 +153,27 @@
     } else {
         self.noResultLabel.hidden = NO;
         self.noResultLabel.text = @"没有搜索结果";
-        //self.webView.hidden = YES;
+        self.contentTable.hidden = YES;
     }
 
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //return [self.contentTable numberOfSectionsInTableView:tableView];
     return 1;
 }
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"num of row in sec %d: %d", section, [self.lookupDict count]);
-    return [self.lookupDict count];//[mContentTable numberOfRowsInSection:section];
+    return [self.lookupDict count];
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"_Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -185,22 +188,23 @@
     //NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
     
     cell.textLabel.text = entry.word;        
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", entry.desc];
+    cell.detailTextLabel.text = @"aaa";//entry.desc;
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Dont do anything now
+    /*
     // open a alert with an OK and cancel button
     NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     [alert show];
+     */
 }
 
 - (void)insertEntry:(NSString*)word desc:(NSString*)desc
 {
-    NSLog(@"before update, array size = %d", [self.lookupDict count]);
-    
     DictEntry *entry = [[DictEntry alloc] init:word desc:desc];
     
     [self.lookupDict insertObject:entry atIndex:0];
