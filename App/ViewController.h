@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "UITextViewController.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate> {
+    integer_t curSearchLen;
+}
+
+@property (nonatomic) NSString * curSearchLetters;
 
 @property (nonatomic) NSMutableArray * lookupDict;
 

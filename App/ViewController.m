@@ -15,6 +15,8 @@
 
 @implementation ViewController
 
+@synthesize curSearchLetters;
+
 @synthesize lookupDict;
 @synthesize letters;
 @synthesize lengthLabel;
@@ -38,6 +40,9 @@
     self.lookupDict = [NSMutableArray array];
     
     self.contentTable.hidden = YES;
+    
+    self.curSearchLetters = @"";
+    self->curSearchLen = 0;
     
 }
 
@@ -76,8 +81,15 @@
 
 - (void)updateResult
 {
-
     integer_t searchLen = self.length.selectedSegmentIndex + 3;
+    
+    if( self->curSearchLen == searchLen && [self.curSearchLetters caseInsensitiveCompare:self.letters.text] == NSOrderedSame ) {
+        // Nothing changed, don't update.
+        return;
+    }
+    
+    self.curSearchLetters = self.letters.text;
+    self->curSearchLen = searchLen;
     
     if ( self.letters.text.length >= searchLen ) {
         [self.lookupDict removeAllObjects];
