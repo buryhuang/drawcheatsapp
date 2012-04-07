@@ -75,11 +75,13 @@
     integer_t searchLen = self.length.selectedSegmentIndex + 3;
     
     if ( self.letters.text.length >= searchLen ) {
+        [self.lookupDict removeAllObjects];
+        [self.contentTable reloadData];
         
         self.noResultLabel.hidden = NO;
         self.noResultLabel.text = @"搜索中....";
         //self.webView.hidden = YES;
- /*       
+    
         NSError *error;
         NSURLResponse *response;
         NSData *dataReply;
@@ -89,10 +91,13 @@
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         dataReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
 
         id stringReply;
         stringReply = (NSString *)[[NSString alloc] initWithData:dataReply encoding:NSUTF8StringEncoding];
+        
+
+        //////////////////////////////////
         // Some debug code, etc.
         // NSLog(@"reply from server: %@", stringReply);
 
@@ -102,18 +107,44 @@
         NSLog(@"HTTP Response Headers %@", [httpResponse allHeaderFields]); 
         NSLog(@"HTTP Status code: %d", statusCode);
         // End debug.
-
-        //[self.webView loadRequest:request];
-        //[self.webView stringByEvaluatingJavaScriptFromString:@"document.body.style.zoom = 0.5;"];
-        //self.webView.scalesPageToFit = NO;
+        /////////////////////////////////
         
-        NSString * descStr = [NSString stringWithFormat:@"returned code:%d", statusCode];
-*/
-        // [mContentTable insertEntry:@"aaa" desc:descStr];
-        [self insertEntry:@"aaa" desc:@"bbb"];
+        // Parse content
+        NSString * wordPrefix = @"class=\"word\">";
+        NSString * transPrefix = @"class=\"trans\">";
+        NSString * newWord;
+        NSString * newTrans;
+        
+        NSScanner * theScanner = [NSScanner scannerWithString:stringReply];
+        while ([theScanner isAtEnd] == NO) {
+            BOOL foundWord = NO;
+            newWord = @"No word";
+            newTrans = @"No trans";
 
-        [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]]
-                              withRowAnimation:UITableViewRowAnimationRight];
+            if([theScanner scanUpToString:wordPrefix intoString:nil] == YES) {
+                NSScanner * wordScanner = [NSScanner scannerWithString:[stringReply substringFromIndex:[theScanner scanLocation]]];
+                
+                if([wordScanner scanUpToString:@"<" intoString:&newWord] == YES) {
+                    foundWord = YES;
+                }
+            }
+
+            if([theScanner scanUpToString:transPrefix intoString:nil] == YES) {
+                NSScanner * transScanner = [NSScanner scannerWithString:[stringReply substringFromIndex:[theScanner scanLocation]]];
+                
+                [transScanner scanUpToString:@"<" intoString:&newTrans];
+            }
+
+            if(foundWord) {
+                [self insertEntry:[newWord substringFromIndex:[wordPrefix length]]
+                                desc:[newTrans substringFromIndex:[transPrefix length]]];
+            
+                [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
+            }
+        
+        }
+
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
     } else {
         self.noResultLabel.hidden = NO;
