@@ -69,7 +69,9 @@
 -(IBAction) segmentedControlIndexChanged
 {
     //dont do this now.
-    //[self updateResult];
+    if([self.letters isEditing] == NO) {
+        [self updateResult];
+    }
 }
 
 - (void)updateResult

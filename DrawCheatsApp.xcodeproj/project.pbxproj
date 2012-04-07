@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB30581615304611004A32B9 /* iPhone5.1 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iPhone5.1 copy-Info.plist"; path = "/Users/buryh/Desktop/DrawCheatsApp/iPhone5.1 copy-Info.plist"; sourceTree = "<absolute>"; };
 		BBBF2486152F341A00AA228F /* Draw助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Draw助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBF248A152F341A00AA228F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBBF248C152F341A00AA228F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +76,7 @@
 				BBBF24B4152F350100AA228F /* App */,
 				BBBF2489152F341A00AA228F /* Frameworks */,
 				BBBF2487152F341A00AA228F /* Products */,
+				BB30581615304611004A32B9 /* iPhone5.1 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BBBF2485152F341A00AA228F /* Draw助手 */ = {
+		BBBF2485152F341A00AA228F /* iPhone5.1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "Draw助手" */;
+			buildConfigurationList = BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "iPhone5.1" */;
 			buildPhases = (
 				BBBF2482152F341A00AA228F /* Sources */,
 				BBBF2483152F341A00AA228F /* Frameworks */,
@@ -145,7 +147,7 @@
 			);
 			dependencies = (
 			);
-			name = "Draw助手";
+			name = iPhone5.1;
 			productName = DrawCheatsApp;
 			productReference = BBBF2486152F341A00AA228F /* Draw助手.app */;
 			productType = "com.apple.product-type.application";
@@ -170,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BBBF2485152F341A00AA228F /* Draw助手 */,
+				BBBF2485152F341A00AA228F /* iPhone5.1 */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Draw助手";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -301,7 +303,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Draw助手";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -319,7 +321,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "Draw助手" */ = {
+		BBBF249E152F341A00AA228F /* Build configuration list for PBXNativeTarget "iPhone5.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBBF249F152F341A00AA228F /* Debug */,
