@@ -111,14 +111,9 @@
 */
         // [mContentTable insertEntry:@"aaa" desc:descStr];
         [self insertEntry:@"aaa" desc:@"bbb"];
-        
-        [self.contentTable reloadData];
 
-/*
         [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]]
                               withRowAnimation:UITableViewRowAnimationRight];
-*/
-        //[mContentTable reloadData];
 
     } else {
         self.noResultLabel.hidden = NO;
