@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DictEntry : NSObject {
-    NSString * mWord;
-    NSString * mDesc;
-}
+@interface DictEntry : NSObject;
 
 @property (copy) NSString * word;
 @property (copy) NSString * desc;

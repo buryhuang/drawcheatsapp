@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIDictTableView.h"
+#import "DictEntry.h"
 
 @interface ViewController ()
 
@@ -15,15 +15,12 @@
 
 @implementation ViewController
 
-@synthesize letters = mLetters;
-
-@synthesize lengthLabel = mLengthLabel;
-@synthesize length = mLength;
-
-@synthesize noResultLabel = mNoResultLabel;
-
-@synthesize contentTable = mContentTable;
-
+@synthesize lookupDict;
+@synthesize letters;
+@synthesize lengthLabel;
+@synthesize length;
+@synthesize noResultLabel;
+@synthesize contentTable;
 
 - (void)viewDidLoad
 {
@@ -36,9 +33,9 @@
     
     self.noResultLabel.hidden = NO;
     
-    mContentTable = [[UIDictTableView alloc] init];
+//    self.contentTable.delegate = self;
     
-    [mContentTable insertEntry:@"aaa" desc:@"aaaDesc"];
+    self.lookupDict = [NSMutableArray array];
     
 }
 
@@ -57,25 +54,6 @@
     }
 }
 
-- (void)dealloc
-{
-    [mLetters release];
-    mLetters = nil;
-    
-    [mLengthLabel release];
-    mLengthLabel = nil;
-    [mLength release];
-    mLength = nil;
-    
-    [mNoResultLabel release];
-    mNoResultLabel = nil;
-    
-    [mContentTable release];
-    mContentTable = nil;
-
-    [super dealloc];
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 { 
     [textField resignFirstResponder];
@@ -88,20 +66,7 @@
 // Segmented Control
 -(IBAction) segmentedControlIndexChanged
 {
-    switch (self.length.selectedSegmentIndex) {
-/*
-        case 0:
-            self.segmentLabel.text =@"1 selected.";
-            break;
-        case 1:
-            self.segmentLabel.text =@"2 selected.";
-            break;
- */
-        default:
-            break;
-    }
     [self updateResult];
-
 }
 
 - (void)updateResult
@@ -114,19 +79,22 @@
         self.noResultLabel.hidden = NO;
         self.noResultLabel.text = @"搜索中....";
         //self.webView.hidden = YES;
-        
+ /*       
         NSError *error;
         NSURLResponse *response;
         NSData *dataReply;
     
         NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"http://dict.youdao.com/drawsth?letters=%@&length=%d", self.letters.text, searchLen]];
         NSURLRequest* request = [NSURLRequest requestWithURL:url];
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         dataReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
         id stringReply;
         stringReply = (NSString *)[[NSString alloc] initWithData:dataReply encoding:NSUTF8StringEncoding];
         // Some debug code, etc.
-        NSLog(@"reply from server: %@", stringReply);
+        // NSLog(@"reply from server: %@", stringReply);
 
         NSHTTPURLResponse *httpResponse;
         httpResponse = (NSHTTPURLResponse *)response;
@@ -138,6 +106,19 @@
         //[self.webView loadRequest:request];
         //[self.webView stringByEvaluatingJavaScriptFromString:@"document.body.style.zoom = 0.5;"];
         //self.webView.scalesPageToFit = NO;
+        
+        NSString * descStr = [NSString stringWithFormat:@"returned code:%d", statusCode];
+*/
+        // [mContentTable insertEntry:@"aaa" desc:descStr];
+        [self insertEntry:@"aaa" desc:@"bbb"];
+        
+        [self.contentTable reloadData];
+
+/*
+        [self.contentTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]]
+                              withRowAnimation:UITableViewRowAnimationRight];
+*/
+        //[mContentTable reloadData];
 
     } else {
         self.noResultLabel.hidden = NO;
@@ -149,28 +130,36 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [mContentTable numberOfSectionsInTableView:tableView];
+    //return [self.contentTable numberOfSectionsInTableView:tableView];
+    return 1;
 }
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [mContentTable numberOfRowsInSection:section];
+    NSLog(@"num of row in sec %d: %d", section, [self.lookupDict count]);
+    return [self.lookupDict count];//[mContentTable numberOfRowsInSection:section];
 }
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
     static NSString *CellIdentifier = @"Cell";
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] init];
     }
-
-    // Set up the cell...
-
-    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-    cell.textLabel.text = [NSString  stringWithFormat:@"Cell Row #%d", [indexPath row]];
+    
+    DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
+    
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    //NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
+    
+    cell.textLabel.text = entry.word;        
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", entry.desc];
 
     return cell;
 }
@@ -180,7 +169,17 @@
     NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     [alert show];
-    [alert release];
+}
+
+- (void)insertEntry:(NSString*)word desc:(NSString*)desc
+{
+    NSLog(@"before update, array size = %d", [self.lookupDict count]);
+    
+    DictEntry *entry = [[DictEntry alloc] init:word desc:desc];
+    
+    [self.lookupDict insertObject:entry atIndex:0];
+    
+    NSLog(@"after update, array size = %d", [self.lookupDict count]);
 }
 
 

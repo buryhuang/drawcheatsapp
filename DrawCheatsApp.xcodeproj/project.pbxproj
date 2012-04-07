@@ -12,9 +12,7 @@
 		BBBF248F152F341A00AA228F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248E152F341A00AA228F /* CoreGraphics.framework */; };
 		BBBF24C1152F350100AA228F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24B6152F350100AA228F /* AppDelegate.m */; };
 		BBBF24C2152F350100AA228F /* DictEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24B8152F350100AA228F /* DictEntry.m */; };
-		BBBF24C3152F350100AA228F /* DictEnty.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BA152F350100AA228F /* DictEnty.m */; };
 		BBBF24C4152F350100AA228F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BC152F350100AA228F /* main.m */; };
-		BBBF24C5152F350100AA228F /* UIDictTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24BE152F350100AA228F /* UIDictTableView.m */; };
 		BBBF24C6152F350100AA228F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBF24C0152F350100AA228F /* ViewController.m */; };
 		BBBF24DD152F35A100AA228F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D7152F35A100AA228F /* InfoPlist.strings */; };
 		BBBF24DE152F35A100AA228F /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D9152F35A100AA228F /* ViewController_iPad.xib */; };
@@ -34,11 +32,7 @@
 		BBBF24B6152F350100AA228F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BBBF24B7152F350100AA228F /* DictEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictEntry.h; sourceTree = "<group>"; };
 		BBBF24B8152F350100AA228F /* DictEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictEntry.m; sourceTree = "<group>"; };
-		BBBF24B9152F350100AA228F /* DictEnty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictEnty.h; sourceTree = "<group>"; };
-		BBBF24BA152F350100AA228F /* DictEnty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictEnty.m; sourceTree = "<group>"; };
 		BBBF24BC152F350100AA228F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BBBF24BD152F350100AA228F /* UIDictTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDictTableView.h; sourceTree = "<group>"; };
-		BBBF24BE152F350100AA228F /* UIDictTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDictTableView.m; sourceTree = "<group>"; };
 		BBBF24BF152F350100AA228F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BBBF24C0152F350100AA228F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BBBF24D8152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,11 +98,7 @@
 				BBBF24B6152F350100AA228F /* AppDelegate.m */,
 				BBBF24B7152F350100AA228F /* DictEntry.h */,
 				BBBF24B8152F350100AA228F /* DictEntry.m */,
-				BBBF24B9152F350100AA228F /* DictEnty.h */,
-				BBBF24BA152F350100AA228F /* DictEnty.m */,
 				BBBF24BC152F350100AA228F /* main.m */,
-				BBBF24BD152F350100AA228F /* UIDictTableView.h */,
-				BBBF24BE152F350100AA228F /* UIDictTableView.m */,
 				BBBF24BF152F350100AA228F /* ViewController.h */,
 				BBBF24C0152F350100AA228F /* ViewController.m */,
 			);
@@ -201,9 +191,7 @@
 			files = (
 				BBBF24C1152F350100AA228F /* AppDelegate.m in Sources */,
 				BBBF24C2152F350100AA228F /* DictEntry.m in Sources */,
-				BBBF24C3152F350100AA228F /* DictEnty.m in Sources */,
 				BBBF24C4152F350100AA228F /* main.m in Sources */,
-				BBBF24C5152F350100AA228F /* UIDictTableView.m in Sources */,
 				BBBF24C6152F350100AA228F /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +274,7 @@
 		BBBF249F152F341A00AA228F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
@@ -298,6 +287,7 @@
 		BBBF24A0152F341A00AA228F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";

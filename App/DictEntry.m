@@ -10,22 +10,15 @@
 
 @implementation DictEntry
 
-@synthesize word = mWord;
-@synthesize desc = mDesc;
+@synthesize word;
+@synthesize desc;
 
-- (void)dealloc {
-    [mWord release];
-    mWord = nil;
-    [mDesc release];
-    mDesc = nil;
-    [super dealloc];
-}
 
 - (id)init: (NSString*)_word desc:(NSString*)_desc
 {
     if ((self = [super init])) {
-         mWord = [_word copy];
-        mDesc = [_desc copy];
+        self.word = [_word copy];
+        self.desc = [_desc copy];
 
     }
     return self;

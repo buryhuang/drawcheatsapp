@@ -8,34 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@class UIDictTableView;
+@interface ViewController : UIViewController <UITextFieldDelegate>;
 
-@interface ViewController : UIViewController
-    <UITextFieldDelegate> {
-    
-    UITextField * mLetters;
-    
-    UILabel *mLengthLabel;
-    UISegmentedControl *mLength;
-    
-    UILabel *mNoResultLabel;
-    
-    UIDictTableView * mContentTable;
+@property (nonatomic) NSMutableArray * lookupDict;
 
-}
-
-@property (nonatomic,retain) IBOutlet UITextField * letters;
+@property (nonatomic) IBOutlet UITextField * letters;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 
-@property (nonatomic,retain) IBOutlet UILabel *lengthLabel;
-@property (nonatomic,retain) IBOutlet UISegmentedControl *length;
+@property (nonatomic) IBOutlet UILabel *lengthLabel;
+@property (nonatomic) IBOutlet UISegmentedControl *length;
 
-@property (nonatomic,retain) IBOutlet UILabel *noResultLabel;
+@property (nonatomic) IBOutlet UILabel *noResultLabel;
 
-@property (nonatomic, retain) IBOutlet UIDictTableView *contentTable;
+@property (nonatomic) IBOutlet UITableView *contentTable;
 
 -(IBAction) segmentedControlIndexChanged;
 
 - (void)updateResult;
+
+- (void)insertEntry:(NSString*)word desc:(NSString*)desc;
 
 @end
