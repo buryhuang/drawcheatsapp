@@ -21,6 +21,7 @@
 @synthesize length;
 @synthesize noResultLabel;
 @synthesize contentTable;
+@synthesize detailTextView;
 
 - (void)viewDidLoad
 {
@@ -149,6 +150,12 @@
         }
 
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
+        if( [self.lookupDict count] == 0) {
+            self.noResultLabel.text = @"没有搜索结果";
+            self.noResultLabel.hidden = NO;
+            self.contentTable.hidden = YES;
+        }
 
     } else {
         self.noResultLabel.hidden = NO;
@@ -165,8 +172,10 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"num of row in sec %d: %d", section, [self.lookupDict count]);
-    return [self.lookupDict count];
+    NSInteger cellCount = [self.lookupDict count];
+    NSLog(@"num of row in sec %d: %d", section, cellCount);
+
+    return cellCount;
 }
 
 // Customize the appearance of table view cells.
@@ -202,6 +211,13 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     [alert show];
      */
+	if (self.detailTextView == nil) {
+        self.detailTextView = [[UITextViewController alloc] initWithNibName:@"DetailTextViewController" bundle:[NSBundle mainBundle]];
+    }
+    
+    DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
+    [self.detailTextView.detailText setText:entry.desc];
+    [self.navigationController pushViewController:self.detailTextView animated:YES];
 }
 
 - (void)insertEntry:(NSString*)word desc:(NSString*)desc

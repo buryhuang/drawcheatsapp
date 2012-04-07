@@ -17,6 +17,8 @@
 		BBBF24DD152F35A100AA228F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D7152F35A100AA228F /* InfoPlist.strings */; };
 		BBBF24DE152F35A100AA228F /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24D9152F35A100AA228F /* ViewController_iPad.xib */; };
 		BBBF24DF152F35A100AA228F /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24DB152F35A100AA228F /* ViewController_iPhone.xib */; };
+		BBD9AACE15303427001EDDA3 /* UITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD9AACC15303427001EDDA3 /* UITextViewController.m */; };
+		BBD9AACF15303427001EDDA3 /* UITextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD9AACD15303427001EDDA3 /* UITextViewController.xib */; };
 		BBDAD647152F39DA00A17CAD /* DefaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD646152F39DA00A17CAD /* DefaultIcon.png */; };
 		BBDAD649152F39E600A17CAD /* DefaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */; };
 		BBDAD64B152F39ED00A17CAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD64A152F39ED00A17CAD /* Default.png */; };
@@ -38,6 +40,9 @@
 		BBBF24D8152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		BBBF24DA152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		BBBF24DC152F35A100AA228F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		BBD9AACB15303426001EDDA3 /* UITextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewController.h; sourceTree = "<group>"; };
+		BBD9AACC15303427001EDDA3 /* UITextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewController.m; sourceTree = "<group>"; };
+		BBD9AACD15303427001EDDA3 /* UITextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITextViewController.xib; sourceTree = "<group>"; };
 		BBDAD646152F39DA00A17CAD /* DefaultIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultIcon.png; sourceTree = "<group>"; };
 		BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultIcon@2x.png"; sourceTree = "<group>"; };
 		BBDAD64A152F39ED00A17CAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -94,6 +99,9 @@
 		BBBF24B4152F350100AA228F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BBD9AACB15303426001EDDA3 /* UITextViewController.h */,
+				BBD9AACC15303427001EDDA3 /* UITextViewController.m */,
+				BBD9AACD15303427001EDDA3 /* UITextViewController.xib */,
 				BBBF24B5152F350100AA228F /* AppDelegate.h */,
 				BBBF24B6152F350100AA228F /* AppDelegate.m */,
 				BBBF24B7152F350100AA228F /* DictEntry.h */,
@@ -179,6 +187,7 @@
 				BBDAD649152F39E600A17CAD /* DefaultIcon@2x.png in Resources */,
 				BBDAD64B152F39ED00A17CAD /* Default.png in Resources */,
 				BBDAD64D152F39F200A17CAD /* Default@2x.png in Resources */,
+				BBD9AACF15303427001EDDA3 /* UITextViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +202,7 @@
 				BBBF24C2152F350100AA228F /* DictEntry.m in Sources */,
 				BBBF24C4152F350100AA228F /* main.m in Sources */,
 				BBBF24C6152F350100AA228F /* ViewController.m in Sources */,
+				BBD9AACE15303427001EDDA3 /* UITextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

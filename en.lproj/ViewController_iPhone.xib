@@ -38,7 +38,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUILabel" id="165150076">
+					<object class="IBUILabel" id="860913548">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 52}, {320, 357}}</string>
@@ -66,7 +66,7 @@
 							<int key="type">1</int>
 							<double key="pointSize">17</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="716370556">
+						<object class="NSFont" key="IBUIFont" id="478815327">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
@@ -95,7 +95,7 @@
 						<float key="IBUIMinimumFontSize">10</float>
 						<bool key="IBUIEnabled">NO</bool>
 						<reference key="IBUIFontDescription" ref="247763690"/>
-						<reference key="IBUIFont" ref="716370556"/>
+						<reference key="IBUIFont" ref="478815327"/>
 					</object>
 					<object class="IBUILabel" id="334768959">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -116,7 +116,7 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<reference key="IBUIFontDescription" ref="247763690"/>
-						<reference key="IBUIFont" ref="716370556"/>
+						<reference key="IBUIFont" ref="478815327"/>
 					</object>
 					<object class="IBUISegmentedControl" id="933684498">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -204,7 +204,7 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<reference key="IBUIFontDescription" ref="247763690"/>
-						<reference key="IBUIFont" ref="716370556"/>
+						<reference key="IBUIFont" ref="478815327"/>
 					</object>
 					<object class="IBUITextField" id="837623359">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -259,7 +259,7 @@
 						<bool key="IBUIAlwaysBounceVertical">YES</bool>
 						<int key="IBUISeparatorStyle">1</int>
 						<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
-						<bool key="IBUIAllowsSelection">NO</bool>
+						<bool key="IBUIAllowsSelectionDuringEditing">YES</bool>
 						<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 						<float key="IBUIRowHeight">44</float>
 						<float key="IBUISectionHeaderHeight">22</float>
@@ -326,7 +326,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">noResultLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="165150076"/>
+						<reference key="destination" ref="860913548"/>
 					</object>
 					<int key="connectionID">108</int>
 				</object>
@@ -385,7 +385,7 @@
 							<reference ref="933684498"/>
 							<reference ref="241131353"/>
 							<reference ref="993370835"/>
-							<reference ref="165150076"/>
+							<reference ref="860913548"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -421,7 +421,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">107</int>
-						<reference key="object" ref="165150076"/>
+						<reference key="object" ref="860913548"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>

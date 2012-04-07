@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITextViewController.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate>;
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) NSMutableArray * lookupDict;
+@property (retain) UITextViewController * detailTextView;
 
 @property (nonatomic) IBOutlet UITextField * letters;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
@@ -21,6 +23,7 @@
 @property (nonatomic) IBOutlet UILabel *noResultLabel;
 
 @property (nonatomic) IBOutlet UITableView *contentTable;
+
 
 -(IBAction) segmentedControlIndexChanged;
 
