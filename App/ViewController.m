@@ -38,7 +38,7 @@
     
     self.letters.delegate = self;
     
-    self.lengthLabel.text =@"Length:";
+    //self.lengthLabel.text =@"Length:";
     
     self.noResultLabel.hidden = NO;
     
