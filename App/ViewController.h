@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "iAd/ADBannerView.h"
+#import "UITextViewController.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate> {
     integer_t curSearchLen;
@@ -16,6 +17,8 @@
 @property (nonatomic) NSString * curSearchLetters;
 
 @property (nonatomic) NSMutableArray * lookupDict;
+
+@property (nonatomic) UITextViewController * detailTextViewControler;
 
 @property (nonatomic) IBOutlet UITextField * letters;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;

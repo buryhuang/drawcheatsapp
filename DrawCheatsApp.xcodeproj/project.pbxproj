@@ -291,12 +291,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HAOHUA Huang";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HAOHUA Huang (HVM323BN6T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: HAOHUA Huang (HVM323BN6T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
 				PRODUCT_NAME = "Draw助手";
-				PROVISIONING_PROFILE = "96F98B21-905B-4762-9C45-274C1614FBB9";
+				PROVISIONING_PROFILE = "0E10A760-B8EC-4F30-B831-2DA586021539";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E10A760-B8EC-4F30-B831-2DA586021539";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -306,12 +308,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HAOHUA Huang";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HAOHUA Huang (HVM323BN6T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: HAOHUA Huang (HVM323BN6T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DrawCheatsApp/DrawCheatsApp-Prefix.pch";
 				INFOPLIST_FILE = "DrawCheatsApp/DrawCheatsApp-Info.plist";
 				PRODUCT_NAME = "Draw助手";
-				PROVISIONING_PROFILE = "96F98B21-905B-4762-9C45-274C1614FBB9";
+				PROVISIONING_PROFILE = "0E10A760-B8EC-4F30-B831-2DA586021539";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E10A760-B8EC-4F30-B831-2DA586021539";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

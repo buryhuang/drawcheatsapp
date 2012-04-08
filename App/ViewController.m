@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DictEntry.h"
+#import "UITextViewController.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,8 @@
 @implementation ViewController
 
 @synthesize curSearchLetters;
+
+@synthesize detailTextViewControler;
 
 @synthesize lookupDict;
 @synthesize letters;
@@ -45,7 +48,8 @@
     self.curSearchLetters = @"";
     self->curSearchLen = 0;
     
-    [super viewDidLoad];
+    self->detailTextViewControler = [[UITextViewController alloc] initWithNibName:@"UITextViewController" bundle:[NSBundle mainBundle]];
+
     //(void)[self.adBanner initWithFrame:CGRectZero];
     //self.adBanner.requiredContentSizeIdentifiers = 
     //[NSSet setWithObjects:ADBannerContentSizeIdentifierPortrait,nil];
@@ -241,11 +245,12 @@
 /*
     UIViewController * detailTextView;
     detailTextView = [[UIViewController alloc] init];
-
-    DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
-    //[self.detailTextView.detailText setText:entry.desc];
-    [self.navigationController pushViewController:detailTextView animated:YES];
 */
+    DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
+    [self.detailTextViewControler.detailText setText:entry.desc];
+    [self.navigationController pushViewController:self.detailTextViewControler animated:YES];
+     
+
 }
 
 - (void)insertEntry:(NSString*)word desc:(NSString*)desc
