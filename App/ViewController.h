@@ -10,9 +10,11 @@
 #import "iAd/ADBannerView.h"
 #import "UITextViewController.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate> {
+@interface ViewController : UIViewController <UITextFieldDelegate, NSURLConnectionDelegate > {
     integer_t curSearchLen;
 }
+
+@property (nonatomic) NSString * stringToParse;
 
 @property (nonatomic) NSString * curSearchLetters;
 
