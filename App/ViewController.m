@@ -33,6 +33,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.title = @"Draw助手";
+    
     self.letters.delegate = self;
     
     self.lengthLabel.text =@"Length:";

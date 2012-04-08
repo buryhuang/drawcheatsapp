@@ -28,6 +28,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    self.title = [NSString stringWithFormat:@"%@翻译", entry.word];
     [self.detailText setText:[NSString stringWithFormat:@"%@\n%@", self.entry.word, self.entry.desc]];
 }
 
