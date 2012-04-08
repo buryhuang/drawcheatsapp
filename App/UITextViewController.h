@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DictEntry.h"
 
 @interface UITextViewController : UIViewController
+
+@property (nonatomic) DictEntry * entry;
 
 @property (nonatomic) IBOutlet UITextView * detailText;
 

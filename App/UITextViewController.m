@@ -14,6 +14,7 @@
 
 @implementation UITextViewController
 
+@synthesize entry;
 @synthesize detailText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,11 +26,16 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.detailText setText:[NSString stringWithFormat:@"%@\n%@", self.entry.word, self.entry.desc]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [detailText setText:@"没有详细资料"];
+    //[detailText setText:@"没有详细资料"];
 }
 
 - (void)viewDidUnload

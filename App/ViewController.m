@@ -230,24 +230,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Dont do anything now
-    /*
-    // open a alert with an OK and cancel button
-    NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
-    [alert show];
-     */
-/*
-	if (self.detailTextView == nil) {
-        self.detailTextView = [[UITextViewController alloc] initWithNibName:@"DetailTextViewController" bundle:[NSBundle mainBundle]];
-    }
- */
-/*
-    UIViewController * detailTextView;
-    detailTextView = [[UIViewController alloc] init];
-*/
+
     DictEntry *entry = [self.lookupDict objectAtIndex:indexPath.row];
-    [self.detailTextViewControler.detailText setText:entry.desc];
+    self.detailTextViewControler.entry = entry;
+
     [self.navigationController pushViewController:self.detailTextViewControler animated:YES];
      
 
