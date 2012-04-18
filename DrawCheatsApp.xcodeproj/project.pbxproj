@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB43EBA4153D9152000D8826 /* iPhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBA3153D9152000D8826 /* iPhoneIcon.png */; };
+		BB43EBA6153D916D000D8826 /* iPhoneIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBA5153D916D000D8826 /* iPhoneIcon@2x.png */; };
+		BB43EBAF153E92F1000D8826 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBA7153E92F1000D8826 /* Icon-Small-50.png */; };
+		BB43EBB0153E92F1000D8826 /* Icon-Small-58.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBA8153E92F1000D8826 /* Icon-Small-58.png */; };
+		BB43EBB1153E92F1000D8826 /* Icon-Small-100.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBA9153E92F1000D8826 /* Icon-Small-100.png */; };
+		BB43EBB2153E92F1000D8826 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBAA153E92F1000D8826 /* Icon-Small.png */; };
+		BB43EBB3153E92F1000D8826 /* iPadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBAB153E92F1000D8826 /* iPadIcon.png */; };
+		BB43EBB4153E92F1000D8826 /* iPadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBAC153E92F1000D8826 /* iPadIcon@2x.png */; };
+		BB43EBB5153E92F1000D8826 /* iTunesArtwork512 in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBAD153E92F1000D8826 /* iTunesArtwork512 */; };
+		BB43EBB6153E92F1000D8826 /* iTunesArtwork1024 in Resources */ = {isa = PBXBuildFile; fileRef = BB43EBAE153E92F1000D8826 /* iTunesArtwork1024 */; };
 		BBBF248B152F341A00AA228F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248A152F341A00AA228F /* UIKit.framework */; };
 		BBBF248D152F341A00AA228F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248C152F341A00AA228F /* Foundation.framework */; };
 		BBBF248F152F341A00AA228F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF248E152F341A00AA228F /* CoreGraphics.framework */; };
@@ -19,8 +29,6 @@
 		BBBF24DF152F35A100AA228F /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBF24DB152F35A100AA228F /* ViewController_iPhone.xib */; };
 		BBD9AACE15303427001EDDA3 /* UITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD9AACC15303427001EDDA3 /* UITextViewController.m */; };
 		BBD9AACF15303427001EDDA3 /* UITextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD9AACD15303427001EDDA3 /* UITextViewController.xib */; };
-		BBDAD647152F39DA00A17CAD /* DefaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD646152F39DA00A17CAD /* DefaultIcon.png */; };
-		BBDAD649152F39E600A17CAD /* DefaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */; };
 		BBDAD64B152F39ED00A17CAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD64A152F39ED00A17CAD /* Default.png */; };
 		BBDAD64D152F39F200A17CAD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAD64C152F39F200A17CAD /* Default@2x.png */; };
 		BBE1C8541530E28600C3FB9C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE1C8531530E28600C3FB9C /* iAd.framework */; };
@@ -28,6 +36,16 @@
 
 /* Begin PBXFileReference section */
 		BB30581615304611004A32B9 /* iPhone5.1 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iPhone5.1 copy-Info.plist"; path = "/Users/buryh/Desktop/DrawCheatsApp/iPhone5.1 copy-Info.plist"; sourceTree = "<absolute>"; };
+		BB43EBA3153D9152000D8826 /* iPhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon.png; sourceTree = "<group>"; };
+		BB43EBA5153D916D000D8826 /* iPhoneIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneIcon@2x.png"; sourceTree = "<group>"; };
+		BB43EBA7153E92F1000D8826 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		BB43EBA8153E92F1000D8826 /* Icon-Small-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-58.png"; sourceTree = "<group>"; };
+		BB43EBA9153E92F1000D8826 /* Icon-Small-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-100.png"; sourceTree = "<group>"; };
+		BB43EBAA153E92F1000D8826 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		BB43EBAB153E92F1000D8826 /* iPadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadIcon.png; sourceTree = "<group>"; };
+		BB43EBAC153E92F1000D8826 /* iPadIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadIcon@2x.png"; sourceTree = "<group>"; };
+		BB43EBAD153E92F1000D8826 /* iTunesArtwork512 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork512; sourceTree = "<group>"; };
+		BB43EBAE153E92F1000D8826 /* iTunesArtwork1024 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork1024; sourceTree = "<group>"; };
 		BBBF2486152F341A00AA228F /* Draw助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Draw助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBF248A152F341A00AA228F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBBF248C152F341A00AA228F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,8 +63,6 @@
 		BBD9AACB15303426001EDDA3 /* UITextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewController.h; sourceTree = "<group>"; };
 		BBD9AACC15303427001EDDA3 /* UITextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewController.m; sourceTree = "<group>"; };
 		BBD9AACD15303427001EDDA3 /* UITextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITextViewController.xib; sourceTree = "<group>"; };
-		BBDAD646152F39DA00A17CAD /* DefaultIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultIcon.png; sourceTree = "<group>"; };
-		BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultIcon@2x.png"; sourceTree = "<group>"; };
 		BBDAD64A152F39ED00A17CAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BBDAD64C152F39F200A17CAD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BBE1C8531530E28600C3FB9C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -70,11 +86,19 @@
 		BBBF247B152F341900AA228F = {
 			isa = PBXGroup;
 			children = (
+				BB43EBA7153E92F1000D8826 /* Icon-Small-50.png */,
+				BB43EBA8153E92F1000D8826 /* Icon-Small-58.png */,
+				BB43EBA9153E92F1000D8826 /* Icon-Small-100.png */,
+				BB43EBAA153E92F1000D8826 /* Icon-Small.png */,
+				BB43EBAB153E92F1000D8826 /* iPadIcon.png */,
+				BB43EBAC153E92F1000D8826 /* iPadIcon@2x.png */,
+				BB43EBAD153E92F1000D8826 /* iTunesArtwork512 */,
+				BB43EBAE153E92F1000D8826 /* iTunesArtwork1024 */,
+				BB43EBA5153D916D000D8826 /* iPhoneIcon@2x.png */,
+				BB43EBA3153D9152000D8826 /* iPhoneIcon.png */,
 				BBE1C8531530E28600C3FB9C /* iAd.framework */,
 				BBDAD64C152F39F200A17CAD /* Default@2x.png */,
 				BBDAD64A152F39ED00A17CAD /* Default.png */,
-				BBDAD648152F39E600A17CAD /* DefaultIcon@2x.png */,
-				BBDAD646152F39DA00A17CAD /* DefaultIcon.png */,
 				BBBF24D6152F35A100AA228F /* en.lproj */,
 				BBBF24C7152F350D00AA228F /* Graphics */,
 				BBBF24B4152F350100AA228F /* App */,
@@ -189,11 +213,19 @@
 				BBBF24DD152F35A100AA228F /* InfoPlist.strings in Resources */,
 				BBBF24DE152F35A100AA228F /* ViewController_iPad.xib in Resources */,
 				BBBF24DF152F35A100AA228F /* ViewController_iPhone.xib in Resources */,
-				BBDAD647152F39DA00A17CAD /* DefaultIcon.png in Resources */,
-				BBDAD649152F39E600A17CAD /* DefaultIcon@2x.png in Resources */,
 				BBDAD64B152F39ED00A17CAD /* Default.png in Resources */,
 				BBDAD64D152F39F200A17CAD /* Default@2x.png in Resources */,
 				BBD9AACF15303427001EDDA3 /* UITextViewController.xib in Resources */,
+				BB43EBA4153D9152000D8826 /* iPhoneIcon.png in Resources */,
+				BB43EBA6153D916D000D8826 /* iPhoneIcon@2x.png in Resources */,
+				BB43EBAF153E92F1000D8826 /* Icon-Small-50.png in Resources */,
+				BB43EBB0153E92F1000D8826 /* Icon-Small-58.png in Resources */,
+				BB43EBB1153E92F1000D8826 /* Icon-Small-100.png in Resources */,
+				BB43EBB2153E92F1000D8826 /* Icon-Small.png in Resources */,
+				BB43EBB3153E92F1000D8826 /* iPadIcon.png in Resources */,
+				BB43EBB4153E92F1000D8826 /* iPadIcon@2x.png in Resources */,
+				BB43EBB5153E92F1000D8826 /* iTunesArtwork512 in Resources */,
+				BB43EBB6153E92F1000D8826 /* iTunesArtwork1024 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
